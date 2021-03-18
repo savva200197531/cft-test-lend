@@ -1,0 +1,95 @@
+@import '../vendor/variables';
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: url($assetsPath + 'lines-bg.svg') repeat-y center center;
+
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 190px;
+}
+
+.hidden {
+  display: none;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Geometria', sans-serif;
+}
+
+section:not(:first-child) {
+  margin-top: 200px;
+}
+
+.card-title, .section-title, .card-title-suffix {
+  font-weight: 800;
+  font-family: 'Geometria', sans-serif;
+}
+
+.section-title {
+  font-size: 50px;
+  letter-spacing: 0.02em;
+  line-height: 53px;
+}
+
+.section-text {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 32px;
+}
+
+.card-title {
+  font-size: 60px;
+}
+
+.card-title-separator {
+  font-family: 'Geometria', sans-serif;
+  font-weight: 300;
+}
+
+.card-title-suffix {
+  font-size: 22px;
+  letter-spacing: 0.05em;
+}
+
+.card-title, .card-title-suffix {
+  letter-spacing: 0.05em;
+}
+
+button {
+  border-radius: 50px;
+  height: 51px;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.red-btn {
+  background: $red-button-color;
+  color: white;
+}
+
+.white-btn {
+  background: white;
+  color: $red-button-color;
+}

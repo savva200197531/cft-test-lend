@@ -58,7 +58,7 @@ module.exports = function(){
             {
               loader: "file-loader",
               options: {
-                outputPath: './images',
+                include: path.join(__dirname, '../assets/images'),
                 name: "[name].[ext]",
               },
             },
