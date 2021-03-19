@@ -1,0 +1,35 @@
+[
+  {
+    "img": "assets/images/slider-groups-img1.svg",
+    "title": "Дошкольная группа",
+    "ageStart": "4",
+    "ageEnd": "6",
+    "description": [
+      "Обучаем основам футбола",
+      "Развиваем координацию",
+      "Укрепляем здоровье ребёнка"
+    ]
+  },
+  {
+    "img": "assets/images/slider-groups-img2.svg",
+    "title": "Младшая группа",
+    "ageStart": "7",
+    "ageEnd": "9",
+    "description": [
+      "Укрепляем здоровье ребёнка",
+      "Развиваем координацию",
+      "Обучаем основам футбола"
+    ]
+  },
+  {
+    "img": "assets/images/slider-groups-img3.svg",
+    "title": "Средняя группа",
+    "ageStart": "10",
+    "ageEnd": "12",
+    "description": [
+      "Обучаем основам футбола",
+      "Укрепляем здоровье ребёнка",
+      "Развиваем координацию"
+    ]
+  }
+]

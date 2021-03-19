@@ -23,7 +23,8 @@ module.exports = function(){
       watchContentBase: true,
       hot: true,
       open: true,
-      inline: true
+      inline: true,
+      port: 3000
     },
     plugins: [
       new HtmlWebpackPlugin({

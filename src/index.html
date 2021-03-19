@@ -23,7 +23,14 @@
           ребёнка группу и записаться на пробное занятие
         </p>
       </div>
-      <div class="groups-slider"></div>
+      <div class="groups-slider slider">
+        <div class="slider-controls">
+          <img src="assets/images/arrow-left.svg" alt="prev slide" class="prev-slide">
+          <ul class="dots"></ul>
+          <img src="assets/images/arrow-right.svg" alt="next slide" class="next-slide">
+        </div>
+        <div class="slides-container"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -134,9 +141,19 @@
           </div>
         </a>
       </div>
-      <div class="reviews-slider">
+
+      <div class="videos-slider slider">
+
+        <div class="slider-controls">
+          <img src="assets/images/arrow-left.svg" alt="prev slide" class="prev-slide">
+          <ul class="dots"></ul>
+          <img src="assets/images/arrow-right.svg" alt="next slide" class="next-slide">
+        </div>
+
+        <div class="slides-container"></div>
 
       </div>
+
     </div>
   </div>
 </section>
@@ -160,13 +177,24 @@
         <input type="text" class="form-input" placeholder="Телефон">
         <input type="text" class="form-input" placeholder="Возраст ребёнка">
         <div class="form-agreement">
-          <input type="checkbox" class="form-checkbox">
-          <p class="form-agreement__text">Я согласен на обработку персональных данных</p>
+          <!--          <input type="checkbox" class="form-checkbox">-->
+          <div class="checkbox">
+            <input
+              id="ch1"
+              type="checkbox"
+              class="checkbox-input"
+            >
+            <label
+              for="ch1"
+              class="checkbox-label"
+            >Я согласен на обработку персональных данных</label>
+          </div>
         </div>
         <button type="submit" class="red-btn">Записаться на занятие</button>
       </form>
     </div>
   </div>
+  <div class="map"></div>
 </section>
 <footer class="footer">
   <div class="container">
@@ -180,5 +208,31 @@
     </div>
   </div>
 </footer>
+
+<!--slides template-->
+
+<template class="slide-groups-template">
+  <div class="slide">
+    <h5 class="title"></h5>
+    <div class="age">
+      <h2 class="ageStart card-title"></h2>
+      <span class="card-title-separator">-</span>
+      <h2 class="ageEnd card-title"></h2>
+      <span class="card-title-suffix">лет</span>
+    </div>
+    <ul class="description"></ul>
+    <button class="white-btn">Записаться</button>
+  </div>
+</template>
+
+<template class="slide-videos-template">
+  <div class="slide">
+    <img class="img" src="" alt="slide img">
+  </div>
+</template>
+
+<!--slides template-->
+
+
 </body>
 </html>

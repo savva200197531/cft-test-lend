@@ -1,6 +1,23 @@
 // js
-import { Person } from './Person';
+import Slider from './js/slider';
 
+const groupsSlider = new Slider(
+  'http://localhost:3000/data/groups-slider.json',
+  false,
+  'groups-slider',
+  'slide-groups-template',
+  ['bg', 'title', 'ageStart', 'ageEnd', 'description']
+);
+groupsSlider.getSlides();
+
+const videosSlider = new Slider(
+  'http://localhost:3000/data/videos-slider.json',
+  true,
+  'videos-slider',
+  'slide-videos-template',
+  ['img']
+);
+videosSlider.getSlides();
 
 // css
 import './scss/style.scss';
@@ -8,6 +25,3 @@ import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
-
-const person = new Person('Savva');
-console.log(person.sayHello());

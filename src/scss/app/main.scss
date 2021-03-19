@@ -1,11 +1,19 @@
 @import '../vendor/variables';
 
+// groups section
+
 .groups-section {
-  margin-top: 125px;
+  padding-top: 125px;
+  overflow: hidden;
+}
+
+.groups {
+  display: flex;
 }
 
 .groups-description {
   max-width: 266px;
+  margin-right: 60px;
 }
 
 .groups-description-title {
@@ -19,7 +27,18 @@
 // schedule section
 
 .schedule-section {
-  //margin-top: 200px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 171px;
+    height: 171px;
+    background: $red-ball-color;
+    border-radius: 50%;
+    top: -80px;
+    right: -44px;
+  }
 }
 
 .schedule-cards {
@@ -54,6 +73,10 @@
   }
 }
 
+.card-title-separator {
+  font-size: 36px;
+}
+
 .cross {
   background: $card-gray-color;
 }
@@ -73,7 +96,32 @@
   font-size: 16px;
 }
 
-// reviews section
+// reviews section\
+
+.reviews-section {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    background: $red-ball-color;
+    border-radius: 50%;
+    left: -241px;
+    top: 0;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 312px;
+    height: 253px;
+    background: url($imagesPath + 'dots.svg');
+    right: 54px;
+    bottom: 0;
+  }
+}
 
 .reviews, .contacts {
   display: grid;
@@ -115,12 +163,6 @@
   font-size: 14px;
 }
 
-.reviews-slider {
-  //max-width: 519px;
-  height: 338px;
-  background: #000;
-}
-
 .account, .contacts-data__bottom, .account-socials {
   display: flex;
   align-items: center;
@@ -131,6 +173,10 @@
 }
 
 // contacts
+
+.contacts {
+  position: relative;
+}
 
 .contacts-data {
   font-size: 18px;
@@ -149,10 +195,36 @@
   padding: 70px 50px;
   background: white;
   box-shadow: $form-shadow;
-  height: 521px;
+  height: 583px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: -70px;
+  min-width: 521px;
+  width: 100%;
+}
+
+.form-title {
+  font-size: 35px;
+  text-align: center;
+}
+
+.form-input {
+  border: none;
+  border-bottom: 1px solid $opacity-03-black-color;
+  padding: 13px 3px;
+  font-size: 14px;
+
+  &::placeholder {
+    color: $opacity-06-black-color;
+  }
+}
+
+.map {
+  margin-top: -308px;
+  height: 392px;
+  background: url($imagesPath + 'map.svg') no-repeat center center;
+  background-size: cover;
 }
 
 // footer
@@ -164,6 +236,10 @@
 .footer-content {
   height: 88px;
   color: white;
+}
+
+.copyright {
+  font-size: 13px;
 }
 
 .footer-content, .socials-list {
