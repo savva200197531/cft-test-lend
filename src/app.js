@@ -6,8 +6,9 @@ const groupsSlider = new Slider(
   false,
   'groups-slider',
   'slide-groups-template',
-  ['bg', 'title', 'ageStart', 'ageEnd', 'description']
+  ['slide-bg', 'slide-title', 'slide-age-start', 'slide-age-end', 'slide-description']
 );
+
 groupsSlider.getSlides();
 
 const videosSlider = new Slider(
@@ -15,7 +16,7 @@ const videosSlider = new Slider(
   true,
   'videos-slider',
   'slide-videos-template',
-  ['img']
+  ['slide-img']
 );
 videosSlider.getSlides();
 

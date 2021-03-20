@@ -68,7 +68,7 @@ class Slider {
         slide.classList.add('next');
         break;
       case this.slides.length - 1:
-        slide.classList.add('last');
+        slide.classList.add('prev');
         break;
     }
   }
@@ -92,10 +92,10 @@ class Slider {
   fillSlide(slide, slideItem, slideNode) {
     this.slideSelectors.forEach(selector => {
       switch (selector) {
-        case 'bg':
-          slide.style.backgroundImage = `url('${slideItem.img}')`;
+        case 'slide-bg':
+          slide.style.backgroundImage = `url('${slideItem[selector]}')`;
           break;
-        case 'description':
+        case 'slide-description':
           slideItem[selector].forEach(descriptionItem => {
             const li = document.createElement('li');
             li.textContent = `-${descriptionItem}`;
@@ -103,7 +103,7 @@ class Slider {
             slideNode.querySelector(`.${selector}`).append(li);
           });
           break;
-        case 'img':
+        case 'slide-img':
           slideNode.querySelector(`.${selector}`).src = slideItem[selector];
           break;
         default:
@@ -135,7 +135,7 @@ class Slider {
   }
 
   slide() {
-    ['next', 'active', 'last'].forEach(className => {
+    ['next', 'active', 'prev'].forEach(className => {
       this.slidesContainer.querySelector(`.${className}`)?.classList.remove(className);
     });
 
@@ -150,7 +150,7 @@ class Slider {
 
     active.classList.add('active');
     next.classList.add('next');
-    prev.classList.add('last');
+    prev.classList.add('prev');
   }
 
   getSlides() {

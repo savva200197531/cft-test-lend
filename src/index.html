@@ -60,26 +60,26 @@
         </div>
         <div class="schedule-card cross">
           <div class="card-left__top">
-            <h2 class="card-title">4<span class="card-title-separator">-</span>6</h2>
+            <h2 class="card-title">7<span class="card-title-separator">-</span>9</h2>
             <span class="card-title-suffix">лет</span>
           </div>
           <div class="card-right__top">
             <button class="red-btn">Записаться</button>
           </div>
           <div class="card-left__bottom">
-            <h4 class="card-time">ПН 19:30</h4>
-            <p class="card-place">СК «Юпитер»</p>
-            <p class="card-place">ул. Смирнова, 75В</p>
+            <h4 class="card-time">СР 19:30</h4>
+            <p class="card-place">Стадион «Кедр»</p>
+            <p class="card-place">ул. В. Высоцкого 7/1</p>
           </div>
           <div class="card-right__bottom">
-            <h4 class="card-time">ПН 19:30</h4>
+            <h4 class="card-time">ПТ 19:30</h4>
             <p class="card-place">СК «Юпитер»</p>
             <p class="card-place">ул. Смирнова, 75В</p>
           </div>
         </div>
         <div class="schedule-card cross">
           <div class="card-left__top">
-            <h2 class="card-title">4<span class="card-title-separator">-</span>6</h2>
+            <h2 class="card-title">10<span class="card-title-separator">-</span>12</h2>
             <span class="card-title-suffix">лет</span>
           </div>
           <div class="card-right__top">
@@ -91,28 +91,28 @@
             <p class="card-place">ул. Смирнова, 75В</p>
           </div>
           <div class="card-right__bottom">
-            <h4 class="card-time">ПН 19:30</h4>
+            <h4 class="card-time">ЧТ 19:30</h4>
             <p class="card-place">СК «Юпитер»</p>
             <p class="card-place">ул. Смирнова, 75В</p>
           </div>
         </div>
         <div class="schedule-card">
           <div class="card-left__top">
-            <h2 class="card-title">4<span class="card-title-separator">-</span>6</h2>
+            <h2 class="card-title">13<span class="card-title-separator">-</span>15</h2>
             <span class="card-title-suffix">лет</span>
           </div>
           <div class="card-right__top">
             <button class="red-btn">Записаться</button>
           </div>
           <div class="card-left__bottom">
-            <h4 class="card-time">ПН 19:30</h4>
-            <p class="card-place">СК «Юпитер»</p>
-            <p class="card-place">ул. Смирнова, 75В</p>
+            <h4 class="card-time">СР 20:00</h4>
+            <p class="card-place">Стадион «Кедр»</p>
+            <p class="card-place">ул. В. Высоцкого 7/1</p>
           </div>
           <div class="card-right__bottom">
-            <h4 class="card-time">ПН 19:30</h4>
-            <p class="card-place">СК «Юпитер»</p>
-            <p class="card-place">ул. Смирнова, 75В</p>
+            <h4 class="card-time">ЧТ 19:30</h4>
+            <p class="card-place">Стадион «Кедр»</p>
+            <p class="card-place">ул. В. Высоцкого 7/1</p>
           </div>
         </div>
       </div>
@@ -175,7 +175,14 @@
         <h3 class="form-title">Запишитесь на первое бесплатное занятие</h3>
         <input type="text" class="form-input" placeholder="Имя">
         <input type="text" class="form-input" placeholder="Телефон">
-        <input type="text" class="form-input" placeholder="Возраст ребёнка">
+        <div class="select">
+          <select name="slct" id="slct">
+            <option selected disabled>Возраст ребёнка</option>
+            <option value="1">4 - 6 лет</option>
+            <option value="2">7 - 9 лет </option>
+            <option value="3">10 - 12 лет</option>
+          </select>
+        </div>
         <div class="form-agreement">
           <!--          <input type="checkbox" class="form-checkbox">-->
           <div class="checkbox">
@@ -209,29 +216,29 @@
   </div>
 </footer>
 
-<!--slides template-->
+<!--slides templates-->
 
 <template class="slide-groups-template">
   <div class="slide">
-    <h5 class="title"></h5>
+    <h5 class="slide-title"></h5>
     <div class="age">
-      <h2 class="ageStart card-title"></h2>
+      <h2 class="slide-age-start card-title"></h2>
       <span class="card-title-separator">-</span>
-      <h2 class="ageEnd card-title"></h2>
+      <h2 class="slide-age-end card-title"></h2>
       <span class="card-title-suffix">лет</span>
     </div>
-    <ul class="description"></ul>
+    <ul class="slide-description"></ul>
     <button class="white-btn">Записаться</button>
   </div>
 </template>
 
 <template class="slide-videos-template">
   <div class="slide">
-    <img class="img" src="" alt="slide img">
+    <img class="slide-img" src="" alt="slide img">
   </div>
 </template>
 
-<!--slides template-->
+<!--slides templates-->
 
 
 </body>

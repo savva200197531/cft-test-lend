@@ -16,7 +16,6 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 190px;
-  //padding: 0 50px;
 }
 
 .hidden {
@@ -98,6 +97,8 @@ button {
   color: $red-button-color;
 }
 
+// checkbox
+
 .checkbox {
   font-size: 14px;
   display: flex;
@@ -106,10 +107,6 @@ button {
 
   * {
     cursor: pointer;
-  }
-
-  .checkbox-label {
-    padding-left: 15px;
   }
 
   .checkbox-input {
@@ -146,4 +143,89 @@ button {
       box-shadow: 0 0 0 3px rgba(246, 39, 47, 0.4);
     }
   }
+}
+
+.checkbox-label {
+  padding-left: 15px;
+}
+
+// adaptive
+
+@media screen and (max-width: 1150px) {
+  .container {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 0 60px;
+  }
+
+  section {
+
+    &:not(:first-child) {
+      padding-top: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  section {
+
+    &:not(:first-child) {
+      padding-top: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+
+  .groups-section {
+    padding-top: 20px;
+  }
+
+  section {
+
+    &:not(:first-child) {
+      padding-top: 60px;
+    }
+  }
+
+  button {
+    font-size: 13px;
+    height: 44px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .card-title {
+    font-size: 40px;
+  }
+
+  // checkbox
+
+  .checkbox-label {
+    font-size: 12px;
+    padding-left: 0;
+    padding-bottom: 8px;
+  }
+
+  .checkbox {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
 }

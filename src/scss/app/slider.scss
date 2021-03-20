@@ -6,11 +6,11 @@
   max-width: 80vw;
   position: relative;
   margin: 0 auto;
-  height: 55vh;
+  height: 400px;
 }
 
 .slides-container {
-  height: 55vh;
+  height: 100%;
   max-width: 100rem;
   display: flex;
   position: relative;
@@ -42,26 +42,8 @@
       transform: translateX(100%);
     }
 
-    &.last {
+    &.prev {
       transform: translateX(-100%);
-    }
-
-    &-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      order: 1;
-    }
-
-    &-text {
-      font-size: 1.2rem;
-      order: 4;
-      z-index: 5;
-      position: absolute;
-      bottom: 0;
-      text-align: center;
-      width: 100%;
-      padding: 1rem;
     }
   }
 }
@@ -80,7 +62,7 @@
 .dots {
   display: flex;
   align-items: center;
-  min-width: 18px;
+  margin: 0 9px;
 
   div {
     height: 9px;
@@ -99,7 +81,6 @@
 // groups slider
 
 .groups-slider {
-
   .slides-container {
     width: 100%;
     display: flex;
@@ -133,13 +114,13 @@
           z-index: -1;
         }
 
-        .description-item {
+        .slide-description-item {
           font-size: 14px;
           font-weight: normal;
-          height: 23px;
+          margin: 5px 0;
         }
 
-        .white-btn, .description {
+        .white-btn, .slide-description {
           display: block;
         }
       }
@@ -148,13 +129,13 @@
         transform: translateX(135%);
       }
 
-      &.last {
+      &.prev {
         transform: translateX(250%);
       }
 
       // slide content
 
-      .white-btn, .description {
+      .white-btn, .slide-description {
         display: none;
       }
 
@@ -170,22 +151,62 @@
         }
       }
 
-      .title {
+      .slide-title {
         font-weight: 700;
         font-size: 14px;
         max-width: 100px;
       }
     }
   }
+
 }
 
 //  videos slider
 
 .videos-slider {
+  max-height: 338px;
+
   .slides-container {
 
     .slide {
       height: auto;
+      opacity: 0;
+
+      &.active {
+        opacity: 1;
+      }
     }
+  }
+
+  @media screen and (max-width: 500px) {
+    max-height: 250px;
+  }
+
+  @media screen and (max-width: 400px) {
+    max-height: 210px;
+  }
+}
+
+
+
+// adaptive
+
+@media screen and (max-width: 875px) {
+
+  // groups slider
+
+  .groups-slider {
+    margin: 40px 0 0 0;
+
+    .slider-controls {
+      top: -50px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+
+  .groups-slider {
+    margin: 65px 0 0 0;
   }
 }

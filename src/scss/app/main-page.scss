@@ -36,8 +36,13 @@
     height: 171px;
     background: $red-ball-color;
     border-radius: 50%;
-    top: -80px;
+    top: 20px;
     right: -44px;
+    z-index: -1;
+
+    @media screen and (max-width: 560px) {
+      display: none;
+    }
   }
 }
 
@@ -96,7 +101,7 @@
   font-size: 16px;
 }
 
-// reviews section\
+// reviews section
 
 .reviews-section {
   position: relative;
@@ -110,6 +115,24 @@
     border-radius: 50%;
     left: -241px;
     top: 0;
+    z-index: -1;
+
+    @media screen and (max-width: 560px) {
+      display: none;
+    }
+  }
+}
+
+.reviews, .contacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 40px;
+  position: relative;
+}
+
+.reviews {
+  .section-text {
+    max-width: 435px;
   }
 
   &:after {
@@ -118,20 +141,13 @@
     width: 312px;
     height: 253px;
     background: url($imagesPath + 'dots.svg');
-    right: 54px;
-    bottom: 0;
-  }
-}
+    right: -119px;
+    bottom: 48px;
+    z-index: -1;
 
-.reviews, .contacts {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  grid-gap: 40px;
-}
-
-.reviews {
-  .section-text {
-    max-width: 435px;
+    @media screen and (max-width: 560px) {
+      display: none;
+    }
   }
 }
 
@@ -200,7 +216,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin-top: -70px;
-  min-width: 521px;
+  //min-width: 521px;
   width: 100%;
 }
 
@@ -214,9 +230,52 @@
   border-bottom: 1px solid $opacity-03-black-color;
   padding: 13px 3px;
   font-size: 14px;
+  color: $opacity-06-black-color;
 
   &::placeholder {
     color: $opacity-06-black-color;
+  }
+}
+
+// select
+
+select {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+}
+
+select {
+  flex: 1;
+  cursor: pointer;
+  padding: 13px 3px;
+  color: $opacity-06-black-color;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  background: transparent;
+  overflow: hidden;
+
+  border-bottom: 1px solid $opacity-03-black-color;
+  font-size: 14px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 21px;
+    border: 1px solid #C4C4C4;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+    height: 8px;
+    width: 8px;
+    cursor: pointer;
+    transition: .25s all ease;
   }
 }
 
@@ -225,6 +284,19 @@
   height: 392px;
   background: url($imagesPath + 'map.svg') no-repeat center center;
   background-size: cover;
+  position: relative;
+  z-index: -1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 108px;
+    width: 108px;
+    background: url($imagesPath + 'ellipse.svg');
+    left: 242px;
+    top: 105px;
+    z-index: -1;
+  }
 }
 
 // footer
@@ -256,4 +328,161 @@
 .socials-link {
   color: white;
   font-size: 22px;
+}
+
+// adaptive
+
+@media screen and (max-width: 1420px) {
+
+
+  // contacts section
+
+  .contacts-form {
+    margin-top: 0;
+  }
+
+  .map {
+    margin-top: -100px;
+    height: 300px;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1230px) {
+
+}
+
+@media screen and (max-width: 1150px) {
+
+}
+
+@media screen and (max-width: 1000px) {
+
+  // groups section
+
+  .groups-section {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+
+  // groups section
+
+  .groups-section {
+    padding-top: 70px;
+  }
+
+  .groups {
+    flex-wrap: wrap;
+  }
+
+  // contacts section
+
+  .contacts-form {
+    padding: 50px 30px;
+  }
+
+  // footer
+
+  .socials-list {
+    max-width: 140px;
+  }
+
+}
+
+@media screen and (max-width: 560px) {
+
+  // schedule section
+
+  .schedule-cards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  // reviews section
+
+  .reviews {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  // contacts section
+
+  .contacts {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+  }
+
+  .map {
+    display: none;
+  }
+
+  // footer
+
+  .footer-content {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+
+  // schedule section
+
+  .schedule-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .schedule-card {
+    grid-gap: 10px;
+    padding: 32px 15px 28px 15px;
+  }
+
+  .card-left__top {
+    flex-wrap: wrap;
+  }
+
+  // reviews section
+
+  .reviews-title {
+    margin-top: 18px;
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .reviews {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  // contacts section
+
+  .contacts {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: center;
+  }
+
+  .contacts-data {
+    font-size: 14px;
+  }
+
+  .form-title {
+    font-size: 28px;
+  }
+
+  // footer
+
+  .footer-content {
+    height: 68px;
+  }
+
+  .copyright {
+    display: none;
+  }
+
+  .socials-list {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
 }
