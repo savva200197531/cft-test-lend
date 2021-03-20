@@ -157,6 +157,21 @@
   max-width: 350px;
   margin-top: 40px;
   margin-bottom: 30px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 23px;
+    top: 8px;
+    left: -40px;
+    background: url($imagesPath + 'quotes.svg');
+
+    @media screen and (max-width: 875px) {
+      display: none;
+    }
+  }
 }
 
 .account {
@@ -349,14 +364,6 @@ select {
       display: none;
     }
   }
-}
-
-@media screen and (max-width: 1230px) {
-
-}
-
-@media screen and (max-width: 1150px) {
-
 }
 
 @media screen and (max-width: 1000px) {
