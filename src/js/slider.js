@@ -10,27 +10,27 @@ class Slider {
   ) {
     this.url = url;
     this.navigation = navigation;
-    this.container = container;
+    this.container = document.querySelector(`.${container}`);
     this.template = template;
     this.slideSelectors = slideSelectors;
-    this.slidesContainer = '';
-    this.dots = '';
+    this.slidesContainer = null;
+    this.dots = null;
     this.slides = [];
     this.counter = 0;
+
+    this.dots = this.container.querySelector('.dots');
+    this.slidesContainer = this.container.querySelector('.slides-container');
+
+    const nextBtn = this.container.querySelector('.next-slide');
+    const prevBtn = this.container.querySelector('.prev-slide');
+
+    nextBtn.addEventListener('click', this.nextSlide.bind(this));
+    prevBtn.addEventListener('click', this.prevSlide.bind(this));
   };
 
   drawSlider() {
-    this.container = document.querySelector(`.${this.container}`);
-    this.slidesContainer = this.container.querySelector('.slides-container');
-    this.dots = this.container.querySelector('.dots');
-    const prevBtn = this.container.querySelector('.prev-slide');
-    const nextBtn = this.container.querySelector('.next-slide');
-
     const slideTemplate = document.querySelector(`.${this.template}`);
     const content = slideTemplate.content;
-
-    nextBtn.addEventListener('click', () => this.nextSlide());
-    prevBtn.addEventListener('click', () => this.prevSlide());
 
     // прохожусь по слайдам взятым с json
     this.slides.forEach((slideItem, index) => {
@@ -112,7 +112,7 @@ class Slider {
     })
   }
 
-  
+
   nextSlide() {
     this.counter++;
     if (this.counter > this.slides.length - 1) {

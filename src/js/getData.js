@@ -3,19 +3,19 @@ export function getData(url) {
     let xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
 
-    xhr.onload = function() {
-      if (this.status < 400) {
-        resolve(JSON.parse(this.response));
+    xhr.addEventListener('load', () => {
+      if (xhr.status === 200) {
+        resolve(JSON.parse(xhr.response));
       } else {
-        let error = new Error(this.statusText);
-        error.code = this.status;
+        let error = new Error(xhr.statusText);
+        error.code = xhr.status;
         reject(error);
       }
-    };
+    });
 
-    xhr.onerror = function() {
+    xhr.addEventListener('error', () => {
       reject(new Error("json error"));
-    };
+    });
 
     xhr.send();
   });

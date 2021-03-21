@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npx webpack --config webpack.config.prod.js --mode=production",
     "watch": "npx webpack --watch",
-    "start:dev": "webpack-dev-server"
+    "start": "webpack-dev-server"
   },
   "author": "Kashin Savva",
   "license": "ISC",
@@ -26,7 +26,6 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "url-loader": "^4.1.1",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.0",
     "webpack-dev-server": "^3.1.14"
