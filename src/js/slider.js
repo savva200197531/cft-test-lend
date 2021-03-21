@@ -139,9 +139,10 @@ class Slider {
       this.slidesContainer.querySelector(`.${className}`)?.classList.remove(className);
     });
 
-    Array.from(this.dots.childNodes).forEach(dot => {
-      dot.dataset.key === this.counter.toString() ? dot.classList.add('active') : dot.classList.remove('active')
-    });
+    if (this.dots.childNodes.length) {
+      this.dots.querySelector('.active').classList.remove('active');
+      this.dots.querySelector(`[data-key="${this.counter}"]`).classList.add('active');
+    }
 
     const active = this.slidesContainer.querySelector(`[data-key="${this.counter}"]`);
 
