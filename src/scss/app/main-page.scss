@@ -409,6 +409,15 @@ select {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
+  .schedule-card {
+    grid-gap: 10px;
+    padding: 32px 15px 28px 15px;
+  }
+
+  .card-left__top {
+    flex-wrap: wrap;
+  }
+
   // reviews section
 
   .reviews {
@@ -439,15 +448,6 @@ select {
 
   .schedule-cards {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-
-  .schedule-card {
-    grid-gap: 10px;
-    padding: 32px 15px 28px 15px;
-  }
-
-  .card-left__top {
-    flex-wrap: wrap;
   }
 
   // reviews section

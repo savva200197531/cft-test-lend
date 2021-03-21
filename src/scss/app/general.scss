@@ -151,6 +151,13 @@ button {
 
 // adaptive
 
+@media screen and (max-width: 1390px) {
+
+  .card-title {
+    font-size: 50px;
+  }
+}
+
 @media screen and (max-width: 1150px) {
   .container {
     padding: 0 100px;
@@ -183,6 +190,13 @@ button {
   }
 }
 
+@media screen and (max-width: 560px) {
+
+  .card-title {
+    font-size: 40px;
+  }
+}
+
 @media screen and (max-width: 460px) {
 
   .groups-section {
@@ -208,10 +222,6 @@ button {
   .section-text {
     font-size: 16px;
     line-height: 28px;
-  }
-
-  .card-title {
-    font-size: 40px;
   }
 
   // checkbox
